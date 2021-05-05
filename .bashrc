@@ -115,3 +115,37 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+function cd () {
+    builtin cd "$@"
+    local IFS=$';'
+    for f in $POST_CD; do
+      "$f"
+    done
+    unset IFS
+}
+
+function _mybashrc_cd_hook () {
+    if [ -f .mybashrc ]; then
+        . .mybashrc
+    fi
+}
+
+POST_CD="_mybashrc_cd_hook"
+
+cd .
+
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# mygit
+export MYGITDIR='.mygit'
+alias mg-here='export MYGITTREE="$PWD"'
+alias mg-init='export MYGITTREE="$PWD" && git init --bare "$MYGITTREE/$MYGITDIR"'
+alias mg-hide-untracked="mg config --local status.showUntrackedFiles no"
+alias mg='/usr/bin/git --git-dir="$MYGITTREE/$MYGITDIR" --work-tree="$MYGITTREE"'
