@@ -16,8 +16,9 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=100000
+unset HISTFILESIZE
+HISTTIMEFORMAT="%F %T "
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -116,6 +117,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+set -o allexport; source ~/.env; set +o allexport
+
 function cd () {
     builtin cd "$@"
     local IFS=$';'
@@ -141,6 +144,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+source <(cod init $$ bash)
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # mygit
@@ -149,3 +153,9 @@ alias mg-here='export MYGITTREE="$PWD"'
 alias mg-init='export MYGITTREE="$PWD" && git init --bare "$MYGITTREE/$MYGITDIR"'
 alias mg-hide-untracked="mg config --local status.showUntrackedFiles no"
 alias mg='/usr/bin/git --git-dir="$MYGITTREE/$MYGITDIR" --work-tree="$MYGITTREE"'
+function _mg_cd_hook () {
+    if [ -d .mygit ]; then
+        export MYGITTREE="$PWD"
+    fi
+}
+POST_CD="$POST_CD;_mg_cd_hook"
