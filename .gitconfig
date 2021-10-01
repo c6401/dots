@@ -1,0 +1,42 @@
+[user]
+	email = nc6401+gthb@gmail.com
+	name = c6401
+[core]
+	eol = lf
+	excludesFile = ~/.gitignore
+[alias]
+	abort = "!if test -f .git/MERGE_HEAD; then git merge --abort; elif test -f .git/REBASE_HEAD; then git rebase --abort; elif test -f .git/CHERRY_PICK_HEAD; then git cherry-pick --abort; fi"
+	amend = commit --amend
+	branches = branch -a
+	branch-name = rev-parse --abbrev-ref HEAD
+	branch-remove = branch -D
+	co = checkout
+	continue = "!if test -f .git/MERGE_HEAD; then git merge --continue; elif test -f .git/REBASE_HEAD; then git rebase --continue; elif test -f .git/CHERRY_PICK_HEAD; then git cherry-pick --continue; fi"
+	forcepush = push --force-with-lease
+	fp = forcepush
+	graph = log --graph --all --decorate --oneline
+	hardreset = "!f() { git reset --hard HEAD~$1; }; f"
+	hr = hardreset
+	pick = cherry-pick
+	pop = stash pop
+	publish = !git push -u origin $(git branch-name)
+	pub = publish
+	refresh = !git pull origin $(git branch-name)
+	remotes = remote -v
+	untitled = commit --allow-empty-message -m ''
+	ut = untitled
+	st = status
+	staged = diff --staged --name-only
+	stashes = stash list
+	syncsave = !git savepoint && linearize && git push
+	tags = tag
+	track = add -N
+	uc = uncommit
+	uncommit = reset --mixed HEAD^
+	unpublish = push origin --delete
+	unstage = reset HEAD --
+	unstashed = diff --name-only
+	untrack = rm --cached
+
+[merge]
+	conflictstyle = diff3
