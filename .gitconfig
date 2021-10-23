@@ -6,10 +6,19 @@
 	excludesFile = ~/.gitignore
 [alias]
 	abort = "!if test -f .git/MERGE_HEAD; then git merge --abort; elif test -f .git/REBASE_HEAD; then git rebase --abort; elif test -f .git/CHERRY_PICK_HEAD; then git cherry-pick --abort; fi"
+
+	addup = add -up
 	amend = commit --amend
+
+	# unfold things like 'git b rm test' to 'git branch-rm test' (then to 'git branch -D test')
+	branch = "!f() { if [ $1 ]; then command=$1; shift; git branch-$command $@; else git branch-name; fi; }; f"
+	b = branch
 	branches = branch -a
 	branch-name = rev-parse --abbrev-ref HEAD
 	branch-remove = branch -D
+	branch-rm = branch-remove
+	branch-make = checkout -b
+	branch-mk = branch-make
 	co = checkout
 	continue = "!if test -f .git/MERGE_HEAD; then git merge --continue; elif test -f .git/REBASE_HEAD; then git rebase --continue; elif test -f .git/CHERRY_PICK_HEAD; then git cherry-pick --continue; fi"
 	forcepush = push --force-with-lease
