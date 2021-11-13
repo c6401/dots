@@ -128,13 +128,13 @@ function cd () {
     unset IFS
 }
 
-function _mybashrc_cd_hook () {
-    if [ -f .mybashrc ]; then
-        . .mybashrc
+function _localprofile () {
+    if [ -f .localprofile ]; then
+        . .localprofile
     fi
 }
 
-POST_CD="_mybashrc_cd_hook"
+POST_CD="_localprofile"
 
 cd .
 
