@@ -19,6 +19,8 @@
 	branch-rm = branch-remove
 	branch-make = checkout -b
 	branch-mk = branch-make
+	changed = diff --name-only
+	ci = commit
 	co = checkout
 	continue = "!if test -f .git/MERGE_HEAD; then git merge --continue; elif test -f .git/REBASE_HEAD; then git rebase --continue; elif test -f .git/CHERRY_PICK_HEAD; then git cherry-pick --continue; fi"
 	forcepush = push --force-with-lease
@@ -46,6 +48,7 @@
 	unstage = reset HEAD --
 	unstashed = diff --name-only
 	untrack = rm --cached
+	up = !git fetch && git rebase --autostash FETCH_HEAD
 
 [merge]
 	conflictstyle = diff3

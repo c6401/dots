@@ -4,3 +4,4 @@ alias dc='docker-compose'
 alias g='git'
 alias fd='fdfind'
 alias beep="paplay /usr/share/sounds/sound-icons/capital"
+
