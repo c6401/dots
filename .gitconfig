@@ -13,6 +13,7 @@
 	# unfold things like 'git b rm test' to 'git branch-rm test' (then to 'git branch -D test')
 	branch = "!f() { if [ $1 ]; then command=$1; shift; git branch-$command $@; else git branch-name; fi; }; f"
 	b = branch
+	br = branch
 	branches = branch -a
 	branch-name = rev-parse --abbrev-ref HEAD
 	branch-remove = branch -D
@@ -21,13 +22,19 @@
 	branch-mk = branch-make
 	changed = diff --name-only
 	ci = commit
+	cm = commit -m
 	co = checkout
+	cob = checkout -b
+	oneline = log --pretty=oneline
+	ol = oneline
+	cs = commits
 	continue = "!if test -f .git/MERGE_HEAD; then git merge --continue; elif test -f .git/REBASE_HEAD; then git rebase --continue; elif test -f .git/CHERRY_PICK_HEAD; then git cherry-pick --continue; fi"
 	forcepush = push --force-with-lease
 	fp = forcepush
 	graph = log --graph --all --decorate --oneline
 	hardreset = "!f() { git reset --hard HEAD~$1; }; f"
 	hr = hardreset
+	last = log -1 HEAD --stat
 	pick = cherry-pick
 	pop = stash pop
 	publish = !git push -u origin $(git branch-name)
@@ -43,7 +50,7 @@
 	tags = tag
 	track = add -N
 	uc = uncommit
-	uncommit = reset --mixed HEAD^
+	uncommit = "!f() { git reset --mixed HEAD~$1; }; f"
 	unpublish = push origin --delete
 	unstage = reset HEAD --
 	unstashed = diff --name-only
@@ -54,3 +61,5 @@
 	conflictstyle = diff3
 [rebase]
 	autoStash = true
+[init]
+	defaultBranch = main
