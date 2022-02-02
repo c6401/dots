@@ -1,0 +1,42 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "command": "macros.shellExecute",
+    "key": "shift+enter",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "editor.debug.action.selectionToRepl",
+    "key": "alt+enter"
+  },
+  {
+    "command": "editor.foldAll",
+    "key": "shift+tab",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "command": "editor.toggleFold",
+    "key": "tab",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "command": "org.insertHeadingRespectContent",
+    "key": "ctrl+enter",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "command": "org.demoteSubtree",
+    "key": "alt+right",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "command": "org.promoteSubtree",
+    "key": "alt+left",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "command": "org.incrementContext",
+    "key": "shift+right",
+    "when": "editorLangId == 'org'"
+  }
+]
