@@ -38,5 +38,15 @@
     "command": "org.incrementContext",
     "key": "shift+right",
     "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "ctrl+alt+0",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled"
   }
 ]
