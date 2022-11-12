@@ -18,7 +18,6 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=100000
 unset HISTFILESIZE
-HISTTIMEFORMAT="%F %T "
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -119,43 +118,9 @@ fi
 
 set -o allexport; source ~/.env; set +o allexport
 
-function cd () {
-    builtin cd "$@"
-    local IFS=$';'
-    for f in $POST_CD; do
-      "$f"
-    done
-    unset IFS
-}
+export EDITOR=vim
 
-function _localprofile () {
-    if [ -f .localprofile ]; then
-        . .localprofile
-    fi
-}
-
-POST_CD="_localprofile"
-
-cd .
-
-
-export PATH="$HOME/.pyenv/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-source <(cod init $$ bash)
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# mygit
-export MYGITDIR='.mygit'
-alias mg-here='export MYGITTREE="$PWD"'
-alias mg-init='export MYGITTREE="$PWD" && git init --bare "$MYGITTREE/$MYGITDIR"'
-alias mg-hide-untracked="mg config --local status.showUntrackedFiles no"
-alias mg='/usr/bin/git --git-dir="$MYGITTREE/$MYGITDIR" --work-tree="$MYGITTREE"'
-function _mg_cd_hook () {
-    if [ -d .mygit ]; then
-        export MYGITTREE="$PWD"
-    fi
-}
-POST_CD="$POST_CD;_mg_cd_hook"
+for file in ~/.bashrc.d/*.sh;
+do
+source "$file"
+done
