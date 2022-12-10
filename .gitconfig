@@ -4,10 +4,10 @@
 [core]
 	eol = lf
 	excludesFile = ~/.gitignore
+	editor = vim
 [alias]
 	abort = "!if test -f .git/MERGE_HEAD; then git merge --abort; elif test -f .git/REBASE_HEAD; then git rebase --abort; elif test -f .git/CHERRY_PICK_HEAD; then git cherry-pick --abort; fi"
 
-	addup = add -up
 	amend = commit --amend
 
 	# unfold things like 'git b rm test' to 'git branch-rm test' (then to 'git branch -D test')
