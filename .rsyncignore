@@ -2,7 +2,6 @@
 .cache
 .local
 .pyenv
-.var
 Projects/fc
 snap
 Sync
