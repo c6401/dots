@@ -27,6 +27,8 @@
 
 	diffhead = "!f() { git diff HEAD~$1; }; f"
 
+	empty = commit --allow-empty-message -m ''
+
 	forcepush = push --force-with-lease
 
 	graph = log --graph --all --decorate --oneline
@@ -43,21 +45,17 @@
 	refresh = !git pull origin $(git branch-name)
 	remotes = remote -v
 
-	untitled = commit --allow-empty-message -m ''
 
-	savepoint = !git add -u && git commit --allow-empty-message -m ''
+
+	savepoint = commit -a --allow-empty-message -m ''
 	search = !git rev-list --all | xargs git grep -F
-	sp = savepoint
-	st = status
 	staged = diff --staged --name-only
 	stashes = stash list
 	syncsave = !git savepoint && linearize && git push
-	sw = switch
 
 	tags = tag
 	track = add -N
 
-	uc = uncommit
 	uncommit = "!f() { git reset --mixed HEAD~$1; }; f"
 	unpublish = push origin --delete
 	unstage = reset HEAD --
