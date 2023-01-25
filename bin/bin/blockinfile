@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+block="$(cat $1)"
+grep -Fxq "$block" "$2" || echo "$block" >> "$2"
