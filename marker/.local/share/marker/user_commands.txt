@@ -1,0 +1,13 @@
+docker ps -aq | xargs docker stop##docker stop all
+docker run --rm -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 --name postgres postgres##start portgres
+docker run --rm -d -p 27017:27017 --name mongo mongo##start mongo
+sudo service nginx reload##restart nginx
+./manage.py migrate --run-syncdb##django migrate syncdb
+./manage.py makemigrations --empty app##django datamigration
+./manamge.py test --keepdb##django test don't migrate
+python3 -mpip install user
+python3 -mpip install --user##pip install user
+reset; stty sane; tput rs1; clear; echo -e "\033c"##reset terminall
+curl ifconfig.me##get my ip
+cat /etc/issue##display distro
+TZ=UTC+24##timezone 24 hours ago
