@@ -1,0 +1,9 @@
+matches:
+  - trigger: "/snip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: shopt -s globstar && cd ~/Sync/projects/snippets/snippets && ls **/*.* | cat "$(rofi -dpi 177 -dmenu)"
+
