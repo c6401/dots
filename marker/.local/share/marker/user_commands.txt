@@ -1,5 +1,4 @@
 docker ps -aq | xargs docker stop##docker stop all
-docker run --rm -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 --name postgres postgres##start portgres
 docker run --rm -d -p 27017:27017 --name mongo mongo##start mongo
 sudo service nginx reload##restart nginx
 ./manage.py migrate --run-syncdb##django migrate syncdb
@@ -11,3 +10,12 @@ reset; stty sane; tput rs1; clear; echo -e "\033c"##reset terminall
 curl ifconfig.me##get my ip
 cat /etc/issue##display distro
 TZ=UTC+24##timezone 24 hours ago
+git config credential.helper store##store git pass
+curl -X POST -H "Content-Type: application/json" -d '{}'##curl post json
+env PGPASSWORD=secret psql -h localhost -p 5432 db user##psql
+env PGPASSWORD=postgres psql -h localhost -p 5432 postgres postgres##psql
+chsh -s /bin/bash##change default shell
+colrm##remove column by number
+curl --resolve something.com:443:127.0.0.1 https://something.com/ --cert /etc/nginx/certs/something.crt --key /etc/nginx/certs/something.key --cacert /etc/ssl/certs/something.pem -vv##curl fake domain resolution and https
+curl --unix-socket /var/run/docker.sock##curl use socket
+do-release-upgrade##upgrade os distribution
