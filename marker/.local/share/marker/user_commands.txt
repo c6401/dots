@@ -22,3 +22,6 @@ do-release-upgrade##upgrade os distribution
 git rebase -i HEAD~2##git squash
 git diff master...branch##git compare branches
 git commit --allow-empty-message -m ''##git empty message
+git config --global core.excludesfile ~/.gitignore##global gitignore
+gpg --full-generate-key##gpg generate key
+sqlformat --reindent --keywords upper --identifiers lower -##pipe format sql from sqlparse
