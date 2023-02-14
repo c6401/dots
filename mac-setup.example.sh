@@ -8,8 +8,8 @@ xargs brew install --cask < mac-brew-cask-apps.txt
 stow git-aliases
 stow git-shortaliases
 git config --global --unset-all include.path
-git config --global --add include.path .gitconfig.d/shortaliases.config
-git config --global --add include.path .gitconfig.d/aliases.config
+git config --global --add include.path .gitconfig.d/shortaliases.conf
+git config --global --add include.path .gitconfig.d/aliases.conf
 
 code --install-extension stuart.unique-window-colors
 
