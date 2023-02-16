@@ -25,3 +25,5 @@ git commit --allow-empty-message -m ''##git empty message
 git config --global core.excludesfile ~/.gitignore##global gitignore
 gpg --full-generate-key##gpg generate key
 sqlformat --reindent --keywords upper --identifiers lower -##pipe format sql from sqlparse
+rsync --exclude-from=.rsyncignore##rsync ingore file
+kill %1##kill background process
