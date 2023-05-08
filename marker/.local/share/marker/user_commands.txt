@@ -27,3 +27,8 @@ gpg --full-generate-key##gpg generate key
 sqlformat --reindent --keywords upper --identifiers lower -##pipe format sql from sqlparse
 rsync --exclude-from=.rsyncignore##rsync ingore file
 kill %1##kill background process
+basename $(git symbolic-ref --short refs/remotes/origin/HEAD)##git default branch
+git config --global pull.rebase true##git configure rebase
+git config rebase.autoStash true##git autostash
+sqlformat --reindent --keywords upper --identifiers lower -##sql format
+git commit -m $(py "'Created ' + '$(git diff --staged --name-only)'.split('/')[-1]")##git commit auto created message
