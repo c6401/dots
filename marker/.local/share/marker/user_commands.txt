@@ -32,3 +32,4 @@ git config --global pull.rebase true##git configure rebase
 git config rebase.autoStash true##git autostash
 sqlformat --reindent --keywords upper --identifiers lower -##sql format
 git commit -m $(py "'Created ' + '$(git diff --staged --name-only)'.split('/')[-1]")##git commit auto created message
+./manage.py shell_plus --notebook##django notebook
