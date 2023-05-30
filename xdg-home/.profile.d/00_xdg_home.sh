@@ -1,7 +1,8 @@
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
 export ATOM_HOME="$XDG_DATA_HOME/atom"
 export HISTFILE="$XDG_STATE_HOME/bash/history"
 export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
