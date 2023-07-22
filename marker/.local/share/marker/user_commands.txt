@@ -34,3 +34,8 @@ sqlformat --reindent --keywords upper --identifiers lower -##sql format
 git commit -m $(py "'Created ' + '$(git diff --staged --name-only)'.split('/')[-1]")##git commit auto created message
 ./manage.py shell_plus --notebook##django notebook
 python -m cProfile -o temp.dat##profile python
+python -m gzip --decompress pypi.db.gz##ungzip
+python -m base64 -h##base64
+python -m zipfile -e archive.zip /path##zip
+pip install git+https://github.com/##pip install from git
+echo "ls -l" | at midnight##execute command at time
