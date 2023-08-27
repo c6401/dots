@@ -39,3 +39,7 @@ python -m base64 -h##base64
 python -m zipfile -e archive.zip /path##zip
 pip install git+https://github.com/##pip install from git
 echo "ls -l" | at midnight##execute command at time
+ip route | grep docker0 | awk '{print $9}'##docker internal ip
+find . -type f -newermt "2010-01-01" ! -newermt "2010-06-01"##find files in daterange
+find . -name \*.pyc -delete##find and delete all python pyc files
+gpg --export -a "Your Name" > your.key##gpg export key
