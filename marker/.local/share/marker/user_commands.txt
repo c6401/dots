@@ -43,3 +43,10 @@ ip route | grep docker0 | awk '{print $9}'##docker internal ip
 find . -type f -newermt "2010-01-01" ! -newermt "2010-06-01"##find files in daterange
 find . -name \*.pyc -delete##find and delete all python pyc files
 gpg --export -a "Your Name" > your.key##gpg export key
+while inotifywait -e close_write myfile.py; do ./myfile.py; done##run on file change
+keepassxc-cli show Safe.kdbx mongo##get password from keepass
+lsb_release -a##ubuntu version
+lsof -P -i -n##Apps that use internet connection at the moment
+lsof -i##network activity at the moment
+mount -t tmpfs tmpfs /mnt -o size=1024m##Mount ramdisk
+mplayer -ao pcm -vo null -vc dummy -dumpaudio -dumpfile <output-file> <input-file>##Rip just audio track from video file
