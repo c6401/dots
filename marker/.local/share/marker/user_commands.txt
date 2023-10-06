@@ -50,3 +50,8 @@ lsof -P -i -n##Apps that use internet connection at the moment
 lsof -i##network activity at the moment
 mount -t tmpfs tmpfs /mnt -o size=1024m##Mount ramdisk
 mplayer -ao pcm -vo null -vc dummy -dumpaudio -dumpfile <output-file> <input-file>##Rip just audio track from video file
+nc -v -l 80 < file.ext##Share/serve file using netcat
+openssl rsa -in keyfile -out keyfile##decrypt rsa file
+shuf -n 1 /usr/share/dict/words##random word
+echo test | openssl enc -a -e -k secret | openssl enc -a -d -k secret##openssl encrypting/decrypting with keyword
+ping -i 60 -a <ip>##alarm when ip is online
