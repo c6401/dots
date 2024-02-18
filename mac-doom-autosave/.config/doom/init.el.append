@@ -1,0 +1,5 @@
+(let ((plugin-dir (expand-file-name "~/.config/doom/plugins")))
+  (when (file-exists-p plugin-dir)
+    (add-to-list 'load-path plugin-dir)
+    (dolist (file (directory-files plugin-dir t "\\.el$"))
+      (load file))))
