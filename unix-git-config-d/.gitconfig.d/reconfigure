@@ -1,0 +1,11 @@
+[alias]
+    reconfigure = "!\
+        echo '# Auto-generated includes' > $HOME/.gitconfig.d/gitconfig.includes;\
+        for config_file in $HOME/.gitconfig.d/*.conf; do\
+            echo '[include]' >> $HOME/.gitconfig.d/gitconfig.includes;\
+            echo '    path = '$config_file >> $HOME/.gitconfig.d/gitconfig.includes;\
+        done;\
+        echo 'Reconfigured gitconfig.includes.';\
+    "
+[include]
+    path = /Users/c6401/.gitconfig.d/gitconfig.includes
