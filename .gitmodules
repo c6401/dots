@@ -1,0 +1,6 @@
+[submodule "doom"]
+	path = termux/.config/emacs
+	url = https://github.com/doomemacs/doomemacs
+[submodule "copilot"]
+	path = termux/.vim/pack/github/start/copilot.vim
+	url = https://github.com/github/copilot.vim.git

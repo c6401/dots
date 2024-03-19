@@ -1,0 +1,8 @@
+matches:
+  - trigger: "/snip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: cd /Volumes/swap/projects/snippets/snippets && ls **/*.* | choose | xargs cat
