@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-set -e
-aplay /usr/share/sounds/sound-icons/capital
