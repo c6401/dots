@@ -1,1 +1,0 @@
-HOSTALIASES=~/.myhosts
