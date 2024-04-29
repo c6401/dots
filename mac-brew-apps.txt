@@ -1,6 +1,0 @@
-choose-gui
-fzf
-gh
-stow
-wget
-pyenv-virtualenv
