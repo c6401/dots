@@ -1,0 +1,13 @@
+brave-browser
+buzz
+iterm2
+keepassxc
+lulu
+middleclick
+peazip
+platypus
+rectangle
+telegram
+transmission
+visual-studio-code
+xquartz

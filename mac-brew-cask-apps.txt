@@ -1,2 +1,0 @@
-clipy
-keepassxc
