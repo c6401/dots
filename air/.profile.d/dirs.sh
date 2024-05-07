@@ -1,1 +1,1 @@
-export SWP="/Volumes/swap"
+export swp="/Volumes/swap"
