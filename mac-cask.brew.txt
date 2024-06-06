@@ -1,5 +1,6 @@
 brave-browser
 buzz
+firefox
 iterm2
 keepassxc
 lulu
@@ -11,3 +12,4 @@ telegram
 transmission
 visual-studio-code
 xquartz
+google-chrome

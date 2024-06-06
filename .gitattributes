@@ -1,1 +1,5 @@
-/linux-espanso/.config/espanso/match/common.yml filter=git-crypt diff=git-crypt
+"/air/Library/Application Support/espanso/match/private.yml" filter=git-crypt diff=git-crypt
+
+#git show file with git-crypt
+# git-crypt unlock
+# git show HEAD:air/Library/Application\ Support/espanso/match/private.yml | cat

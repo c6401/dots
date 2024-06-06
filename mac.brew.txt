@@ -19,6 +19,8 @@ lazygit
 libmagic
 moreutils
 netcat
+neovim
+node
 pandoc
 podman
 pyenv
@@ -32,3 +34,5 @@ tldr
 wget
 yq
 noti
+fzf
+gpg-tui
