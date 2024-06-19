@@ -1,1 +1,1 @@
-PATH="$PATH:/Volumes/swap/projects/scripts/bin"
+PATH="$PATH:/Volumes/swap/Sync/projects/scripts/bin"
