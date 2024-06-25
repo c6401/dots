@@ -1,0 +1,19 @@
+[user]
+	email = -
+	name = -
+[core]
+	eol = lf
+	excludesFile = ~/.gitignore
+	editor = vim
+[merge]
+	conflictstyle = diff3
+[rebase]
+	autoStash = true
+[init]
+	defaultBranch = main
+[credential]
+	helper = osxkeychain
+[include]
+	path = /Users/c6401/.gitconfig.d/reconfigure
+[push]
+	default = tracking
