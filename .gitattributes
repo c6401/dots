@@ -1,5 +1,6 @@
 "/air/Library/Application Support/espanso/match/private.yml" filter=git-crypt diff=git-crypt
 "/termux/.newsboat/config" filter=git-crypt diff=git-crypt
+/air/.newsboat/config filter=git-crypt diff=git-crypt
 
 #git show file with git-crypt
 # git-crypt unlock
