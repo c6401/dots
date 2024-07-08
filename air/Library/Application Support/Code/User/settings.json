@@ -1,0 +1,12 @@
+{
+  "macros.list": {
+    "shellExecute": [
+      "expandLineSelection",
+      "workbench.action.terminal.runSelectedText",
+      "cancelSelection"
+    ]
+  },
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.middleClickBehavior": "paste",
+  "terminal.integrated.copyOnSelection": true
+}
