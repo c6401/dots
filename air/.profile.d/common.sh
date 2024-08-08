@@ -1,1 +1,4 @@
+setopt HIST_IGNORE_SPACE
 export CDPATH="/Volumes/swap/tasks"
+HISTSIZE=10000
+HISTFILESIZE=10000
