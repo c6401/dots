@@ -17,3 +17,8 @@
 	path = /Users/c6401/.gitconfig.d/reconfigure
 [push]
 	default = tracking
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
