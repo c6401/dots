@@ -1,1 +1,0 @@
-export swp="/Volumes/swap"
