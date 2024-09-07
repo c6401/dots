@@ -7,6 +7,18 @@
     ]
   },
   "files.autoSave": "afterDelay",
+  "cSpell.userWords": [
+    "imap",
+    "osascript",
+    "pbpaste",
+    "pipx",
+    "pyenv",
+    "syncthing",
+    "tldr",
+    "virtualenv",
+    "websockets",
+    "xonsh",
+  ],
   "terminal.integrated.middleClickBehavior": "paste",
-  "terminal.integrated.copyOnSelection": true
+  "terminal.integrated.copyOnSelection": true,
 }
