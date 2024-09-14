@@ -7,12 +7,23 @@
     ]
   },
   "files.autoSave": "afterDelay",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false
+  },
   "cSpell.userWords": [
+    "contentblocking",
+    "faiss",
     "imap",
     "osascript",
     "pbpaste",
     "pipx",
     "pyenv",
+    "safebrowsing",
+    "sessionstore",
     "syncthing",
     "tldr",
     "virtualenv",
