@@ -1,0 +1,25 @@
+# brew bundle
+# https://github.com/Homebrew/homebrew-bundle
+tap 'homebrew/cask-fonts'
+tap 'ethereum/ethereum'
+brew 'plantuml'
+brew 'mas'
+brew 'stow'
+brew 'cmake'
+brew 'yazi'
+brew 'fd'
+brew 'fx'
+brew 'himalaya'
+cask 'iterm2'
+cask 'espanso'
+
+# cli
+brew 'fzf'
+brew 'git'
+brew 'git-crypt'
+brew 'ripgrep'
+## test
+brew 'dasel'
+brew 'hurl'
+brew 'eza'
+brew 'mitmproxy'
