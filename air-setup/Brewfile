@@ -2,16 +2,19 @@
 # https://github.com/Homebrew/homebrew-bundle
 tap 'homebrew/cask-fonts'
 tap 'ethereum/ethereum'
-brew 'plantuml'
-brew 'mas'
-brew 'stow'
+
 brew 'cmake'
-brew 'yazi'
 brew 'fd'
 brew 'fx'
 brew 'himalaya'
-cask 'iterm2'
+brew 'keepassxc'
+brew 'mas'
+brew 'plantuml'
+brew 'stow'
+brew 'yazi'
+
 cask 'espanso'
+cask 'iterm2'
 cask 'lulu'
 
 # cli
