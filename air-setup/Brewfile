@@ -24,6 +24,7 @@ cask 'espanso'
 cask 'iterm2'
 cask 'keepassxc'
 cask 'lulu'
+cask 'mitmproxy'
 
 ## test
 brew 'dasel'
@@ -32,4 +33,5 @@ brew 'git-bug'
 brew 'hurl'
 brew 'newsboat'
 brew 'yazi'
-cask 'mitmproxy'
+
+cask 'fsnotes'
