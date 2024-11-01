@@ -10,10 +10,10 @@
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
-    "markdown": false,
     "scminput": false,
     "yaml": false
   },
+  "github.copilot.editor.enableAutoCompletions": true,
   "cSpell.userWords": [
     "contentblocking",
     "faiss",
