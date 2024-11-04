@@ -7,6 +7,7 @@
     ]
   },
   "files.autoSave": "afterDelay",
+  "gitlens.ai.experimental.provider": "openai",
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
@@ -26,10 +27,13 @@
     "sessionstore",
     "syncthing",
     "tldr",
+    "vectorize",
     "virtualenv",
     "websockets",
     "xonsh",
   ],
   "terminal.integrated.middleClickBehavior": "paste",
   "terminal.integrated.copyOnSelection": true,
+  "notebook.lineNumbers": "on",
+  "editor.minimap.enabled": false,
 }
