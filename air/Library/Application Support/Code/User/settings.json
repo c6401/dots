@@ -1,20 +1,4 @@
 {
-  "macros.list": {
-    "shellExecute": [
-      "expandLineSelection",
-      "workbench.action.terminal.runSelectedText",
-      "cancelSelection"
-    ]
-  },
-  "files.autoSave": "afterDelay",
-  "gitlens.ai.experimental.provider": "openai",
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "scminput": false,
-    "yaml": false
-  },
-  "github.copilot.editor.enableAutoCompletions": true,
   "cSpell.userWords": [
     "contentblocking",
     "faiss",
@@ -32,8 +16,23 @@
     "websockets",
     "xonsh",
   ],
-  "terminal.integrated.middleClickBehavior": "paste",
-  "terminal.integrated.copyOnSelection": true,
-  "notebook.lineNumbers": "on",
   "editor.minimap.enabled": false,
+  "files.autoSave": "afterDelay",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "scminput": false,
+    "yaml": false
+  },
+  "macros.list": {
+    "shellExecute": [
+      "expandLineSelection",
+      "workbench.action.terminal.runSelectedText",
+      "cancelSelection"
+    ]
+  },
+  "notebook.lineNumbers": "on",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.middleClickBehavior": "paste",
 }
