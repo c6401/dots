@@ -27,10 +27,12 @@ brew 'uv'
 cask 'brave-browser'
 cask 'chatgpt'
 cask 'espanso'
+cask 'font-fira-code'
 cask 'iterm2'
 cask 'keepassxc'
 cask 'lulu'
 cask 'mitmproxy'
+cask 'rectangle'
 
 ## test
 brew 'dasel'
