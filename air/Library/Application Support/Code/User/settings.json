@@ -16,12 +16,16 @@
     "websockets",
     "xonsh",
   ],
+  // "editor.fontLigatures": "'ss09', 'zero', 'onum' 'ss01'",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
   "editor.minimap.enabled": false,
   "files.autoSave": "afterDelay",
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
+    "markdown": true,
     "scminput": false,
     "yaml": false
   },
