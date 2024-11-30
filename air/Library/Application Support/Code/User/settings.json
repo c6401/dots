@@ -39,4 +39,5 @@
   "notebook.lineNumbers": "on",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.middleClickBehavior": "paste",
+  "git.confirmSync": false
 }
