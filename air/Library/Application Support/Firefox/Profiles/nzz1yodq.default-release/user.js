@@ -84,7 +84,7 @@
   * 0=blank, 1=home, 2=last visited page, 3=resume previous session
   * [NOTE] Session Restore is cleared with history (2811), and not used in Private Browsing mode
   * [SETTING] General>Startup>Restore previous session ***/
- user_pref("browser.startup.page", 0);
+//  user_pref("browser.startup.page", 0);
  /* 0103: set HOME+NEWWINDOW page
   * about:home=Firefox Home (default, see 0105), custom URL, about:blank
   * [SETTING] Home>New Windows and Tabs>Homepage and new windows ***/
@@ -648,17 +648,17 @@
   * [NOTE] In FF129+ clearing "siteSettings" on shutdown (2811), or manually via site data (2820) and
   * via history (2830), will no longer remove sanitize on shutdown "cookie and site data" site exceptions (2815) 
   * [SETTING] Privacy & Security>History>Custom Settings>Clear history when Firefox closes | Settings ***/
- user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+//// user_pref("privacy.sanitize.sanitizeOnShutdown", true);
  
  /** SANITIZE ON SHUTDOWN: IGNORES "ALLOW" SITE EXCEPTIONS | v2 migration is FF128+ ***/
  /* 2811: set/enforce what items to clear on shutdown (if 2810 is true) [SETUP-CHROME]
   * [NOTE] If "history" is true, downloads will also be cleared ***/
- user_pref("privacy.clearOnShutdown.cache", true);     // [DEFAULT: true]
- user_pref("privacy.clearOnShutdown_v2.cache", true);  // [FF128+] [DEFAULT: true]
- user_pref("privacy.clearOnShutdown.downloads", true); // [DEFAULT: true]
- user_pref("privacy.clearOnShutdown.formdata", true);  // [DEFAULT: true]
- user_pref("privacy.clearOnShutdown.history", true);   // [DEFAULT: true]
- user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // [FF128+] [DEFAULT: true]
+//  user_pref("privacy.clearOnShutdown.cache", true);     // [DEFAULT: true]
+//  user_pref("privacy.clearOnShutdown_v2.cache", true);  // [FF128+] [DEFAULT: true]
+//  user_pref("privacy.clearOnShutdown.downloads", true); // [DEFAULT: true]
+//  user_pref("privacy.clearOnShutdown.formdata", true);  // [DEFAULT: true]
+//  user_pref("privacy.clearOnShutdown.history", true);   // [DEFAULT: true]
+//  user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true); // [FF128+] [DEFAULT: true]
     // user_pref("privacy.clearOnShutdown.siteSettings", false); // [DEFAULT: false]
     // user_pref("privacy.clearOnShutdown_v2.siteSettings", false); // [FF128+] [DEFAULT: false]
  /* 2812: set Session Restore to clear on shutdown (if 2810 is true) [FF34+]
@@ -676,17 +676,17 @@
   * [SETTING] to add site exceptions: Ctrl+I>Permissions>Cookies>Allow (when on the website in question)
   * [SETTING] to manage site exceptions: Options>Privacy & Security>Permissions>Settings
   * [1] https://en.wikipedia.org/wiki/Basic_access_authentication ***/
- user_pref("privacy.clearOnShutdown.cookies", true); // Cookies
- user_pref("privacy.clearOnShutdown.offlineApps", true); // Site Data
- user_pref("privacy.clearOnShutdown.sessions", true);  // Active Logins [DEFAULT: true]
- user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true); // Cookies, Site Data, Active Logins [FF128+]
+ //// user_pref("privacy.clearOnShutdown.cookies", true); // Cookies
+//  user_pref("privacy.clearOnShutdown.offlineApps", true); // Site Data
+//  user_pref("privacy.clearOnShutdown.sessions", true);  // Active Logins [DEFAULT: true]
+//  user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true); // Cookies, Site Data, Active Logins [FF128+]
  
  /** SANITIZE SITE DATA: IGNORES "ALLOW" SITE EXCEPTIONS ***/
  /* 2820: set manual "Clear Data" items [SETUP-CHROME] [FF128+]
   * Firefox remembers your last choices. This will reset them when you start Firefox
   * [SETTING] Privacy & Security>Browser Privacy>Cookies and Site Data>Clear Data ***/
  user_pref("privacy.clearSiteData.cache", true);
- user_pref("privacy.clearSiteData.cookiesAndStorage", false); // keep false until it respects "allow" site exceptions
+//  user_pref("privacy.clearSiteData.cookiesAndStorage", false); // keep false until it respects "allow" site exceptions
  user_pref("privacy.clearSiteData.historyFormDataAndDownloads", true);
     // user_pref("privacy.clearSiteData.siteSettings", false);
  
@@ -702,10 +702,10 @@
  user_pref("privacy.cpd.history", true);  // [DEFAULT: true]
     // user_pref("privacy.cpd.downloads", true); // not used, see note above
  user_pref("privacy.clearHistory.historyFormDataAndDownloads", true);
- user_pref("privacy.cpd.cookies", false);
- user_pref("privacy.cpd.sessions", true); // [DEFAULT: true]
- user_pref("privacy.cpd.offlineApps", false); // [DEFAULT: false]
- user_pref("privacy.clearHistory.cookiesAndStorage", false);
+//  user_pref("privacy.cpd.cookies", false);
+//  user_pref("privacy.cpd.sessions", true); // [DEFAULT: true]
+//  user_pref("privacy.cpd.offlineApps", false); // [DEFAULT: false]
+//  user_pref("privacy.clearHistory.cookiesAndStorage", false);
     // user_pref("privacy.cpd.openWindows", false); // Session Restore
     // user_pref("privacy.cpd.passwords", false);
     // user_pref("privacy.cpd.siteSettings", false);
