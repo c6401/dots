@@ -42,3 +42,10 @@ matches:
         type: date
         params:
           format: "%y%m%d"
+  - trigger: ":uuid"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: python -c 'print(__import__("uuid").uuid4())'
