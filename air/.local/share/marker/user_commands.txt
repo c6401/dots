@@ -2,8 +2,10 @@
 ./manage.py migrate --run-syncdb##django migrate syncdb
 ./manage.py shell_plus --notebook##django notebook
 ./manamge.py test --keepdb##django test don't migrate
+'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'##chrome path
 basename $(git symbolic-ref --short refs/remotes/origin/HEAD)##git default branch
 cat /etc/issue##display distro
+chrome --headless --dump-dom https://github.com
 chsh -s /bin/bash##change default shell
 colrm##remove column by number
 curl --resolve something.com:443:127.0.0.1 https://something.com/ --cert /etc/nginx/certs/something.crt --key /etc/nginx/certs/something.key --cacert /etc/ssl/certs/something.pem -vv##curl fake domain resolution and https
@@ -17,6 +19,7 @@ echo "ls -l" | at midnight##execute command at time
 echo test | openssl enc -a -e -k secret | openssl enc -a -d -k secret##openssl encrypting/decrypting with keyword
 env PGPASSWORD=postgres psql -h localhost -p 5432 postgres postgres##psql
 env PGPASSWORD=secret psql -h localhost -p 5432 db user##psql
+find . -name '.DS_Store' -type f -delete##remove all ds_store
 find . -name \*.pyc -delete##find and delete all python pyc files
 find . -type f -newermt "2010-01-01" ! -newermt "2010-06-01"##find files in daterange
 git commit --allow-empty-message -m ''##git empty message
@@ -24,6 +27,7 @@ git commit -m $(py "'Created ' + '$(git diff --staged --name-only)'.split('/')[-
 git config --global core.excludesfile ~/.gitignore##global gitignore
 git config --global pull.rebase true##git configure rebase
 git config credential.helper store##store git pass
+git config push.autosetupremote true##git push autosetupremote
 git config rebase.autoStash true##git autostash
 git diff master...branch##git compare branches
 git rebase -i HEAD~2##git squash
@@ -50,6 +54,7 @@ python3 -mpip install user
 reset; stty sane; tput rs1; clear; echo -e "\033c"##reset terminall
 rsync --exclude-from=.rsyncignore##rsync ingore file
 shuf -n 1 /usr/share/dict/words##random word
+shuf -n6 /usr/share/dict/words##xkcd password
 sqlformat --reindent --keywords upper --identifiers lower -##pipe format sql from sqlparse
 sqlformat --reindent --keywords upper --identifiers lower -##sql format
 sudo service nginx reload##restart nginx
