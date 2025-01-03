@@ -62,3 +62,4 @@ TZ=UTC+24##timezone 24 hours ago
 uv run pytest##run pytest
 uvx cookiecutter gh:user/project##run cookiecutter
 while inotifywait -e close_write myfile.py; do ./myfile.py; done##run on file change
+yt-dlp -q --skip-download --convert-subs srt --write-sub --sub-langs "en" --write-auto-sub --print "requested_subtitles.en.url" "$url"##youtube-dl extract subtitles
