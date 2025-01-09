@@ -29,6 +29,7 @@
     "scminput": false,
     "yaml": false
   },
+  "gitlens.ai.experimental.provider": "openai",
   "macros.list": {
     "shellExecute": [
       "expandLineSelection",
