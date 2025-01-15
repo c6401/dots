@@ -49,3 +49,10 @@ matches:
         type: shell
         params:
           cmd: python -c 'print(__import__("uuid").uuid4())'
+  - trigger: ":uid"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: python -c 'print(str(__import__("uuid").uuid4())[:8])'
