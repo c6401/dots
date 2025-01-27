@@ -40,5 +40,13 @@
   "notebook.lineNumbers": "on",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.middleClickBehavior": "paste",
-  "git.confirmSync": false
+  "vscode-neovim.compositeKeys": {
+    "jk": {
+      "command": "vscode-neovim.escape",
+    },
+    "jj": {
+      "command": "vscode-neovim.escape",
+    }
+  },
+  "git.confirmSync": false,
 }
