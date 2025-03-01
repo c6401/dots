@@ -3,18 +3,21 @@
     "contentblocking",
     "faiss",
     "imap",
+    "numpy",
     "osascript",
     "pbpaste",
     "pipx",
     "pyenv",
     "safebrowsing",
     "sessionstore",
+    "startswith",
     "syncthing",
+    "textwrap",
     "tldr",
     "vectorize",
     "virtualenv",
     "websockets",
-    "xonsh",
+    "xonsh"
   ],
   // "editor.fontLigatures": "'ss09', 'zero', 'onum' 'ss01'",
   "editor.fontLigatures": true,
@@ -49,4 +52,5 @@
     }
   },
   "git.confirmSync": false,
+  "editor.renderWhitespace": "all",
 }
