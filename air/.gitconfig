@@ -1,24 +1,67 @@
 [user]
 	email = -
 	name = -
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[commit]
+	verbose = true
 [core]
+	# autocrlf = false
 	eol = lf
-	excludesFile = ~/.gitignore
-	editor = vim
-[merge]
-	conflictstyle = diff3
-[rebase]
-	autoStash = true
-[init]
-	defaultBranch = main
+	fsmonitor = true
+	untrackedCache = true
 [credential]
 	helper = osxkeychain
-[include]
-	path = /Users/c6401/.gitconfig.d/reconfigure
+	excludesfile = ~/.gitignore
+	editor = vim
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+	submodule = log
+[feature]
+	experimental = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[grep]
+	patternType = perl
+[help]
+	autocorrect = prompt
+[init]
+	defaultBranch = main
+[log]
+	data = iso
+[merge]
+	conflictstyle = zdiff3
+[pull]
+	# ff = only
+	rebase = true
 [push]
-	default = tracking
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+[rebase]
+	autosquash = true
+	autostash = true
+	updateRefs = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[status]
+	submoduleSummary = true
+[submodule]
+	recurse = true
+[tag]
+	sort = version:refname
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[include]
+	path = /Users/c6401/.gitconfig.d/include

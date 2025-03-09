@@ -1,5 +1,5 @@
 [alias]
-    reconfigure = "!\
+    include = "!\
         echo '# Auto-generated includes' > $HOME/.gitconfig.d/gitconfig.includes;\
         for config_file in $HOME/.gitconfig.d/*.conf; do\
             echo '[include]' >> $HOME/.gitconfig.d/gitconfig.includes;\
