@@ -3,5 +3,14 @@
     "command": "macros.shellExecute",
     "key": "shift+enter",
     "when": "editorTextFocus && !notebookEditorFocused"
-  }
+  },
+  {
+    "key": "ctrl+c ctrl+t",
+    "command": "-org-code.set.state"
+  },
+  {
+    "key": "shift+enter",
+    "command": "jupyter.runcurrentcelladvance",
+    "when": "isWorkspaceTrusted"
+  },
 ]
