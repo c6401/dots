@@ -35,6 +35,10 @@ matches:
           cmd: "echo 'Hello from your shell'"
   - trigger: ":shr"
     replace: "¯\\_(ツ)_/¯"
+  - trigger: ":arrowup"
+    replace: "↑"
+  - trigger: ":arrowdown"
+    replace: "↓"
   - trigger: ":dt"
     replace: "{{output}}"
     vars:
@@ -56,3 +60,10 @@ matches:
         type: shell
         params:
           cmd: python -c 'print(str(__import__("uuid").uuid4())[:8])'
+  - trigger: ":xkcd"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+           cmd: python -c 'import secrets, pathlib; print(" ".join(secrets.choice( pathlib.Path("/usr/share/dict/words").read_text().splitlines() ) for i in range(8)).lower())'
