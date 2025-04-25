@@ -40,6 +40,7 @@
     "tostring",
     "urllib",
     "vectorize",
+    "viewset",
     "virtualenv",
     "websockets",
     "xonsh"
@@ -78,4 +79,29 @@
   },
   "git.confirmSync": false,
   "editor.renderWhitespace": "all",
+  "jupyter.experiments.enabled": false,
+  "jupyter.interactiveWindow.cellMarker.decorateCells": "allCells",
+  "mcp": {
+    "servers": {
+      "mcp-server-time": {
+        "command": "uvx",
+        "args": [
+          "--with",
+          "mcp_server_time",
+          "python",
+          "-m",
+          "mcp_server_time",
+          "--local-timezone=America/Los_Angeles"
+        ],
+        "env": {}
+      },
+      "playwright": {
+        "command": "npx",
+        "args": [
+          "@playwright/mcp@latest"
+        ]
+      },
+    }
+  },
+  "chat.mcp.discovery.enabled": true,
 }
