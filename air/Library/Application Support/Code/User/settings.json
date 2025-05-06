@@ -14,6 +14,7 @@
     "excludesfile",
     "faiss",
     "finetuning",
+    "fromarray",
     "imap",
     "LDFLAGS",
     "localprofile",
@@ -29,6 +30,7 @@
     "pretrained",
     "pyaudio",
     "pyenv",
+    "readtext",
     "safebrowsing",
     "sessionstore",
     "soundfile",
@@ -101,6 +103,19 @@
           "@playwright/mcp@latest"
         ]
       },
+      "mcp-run-python": {
+        "command": "deno",
+        "args": [
+            "run",
+            "-N",
+            "-R=node_modules",
+            "-W=node_modules",
+            "--node-modules-dir=auto",
+            "jsr:@pydantic/mcp-run-python",
+            "stdio",
+        ],
+        "env": {}
+      }
     }
   },
   "chat.mcp.discovery.enabled": true,
