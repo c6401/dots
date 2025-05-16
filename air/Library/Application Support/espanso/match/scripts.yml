@@ -1,0 +1,8 @@
+matches:
+  - trigger: ":grmr"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "pbpaste | /Volumes/swap/Sync/projects/scripts/bin/grmr"
