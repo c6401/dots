@@ -119,4 +119,6 @@
     }
   },
   "chat.mcp.discovery.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  // "python.analysis.typeCheckingMode": "strict",
 }
