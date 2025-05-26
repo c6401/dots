@@ -11,6 +11,6 @@
   {
     "key": "shift+enter",
     "command": "jupyter.runcurrentcelladvance",
-    "when": "isWorkspaceTrusted"
+    "when": "isWorkspaceTrusted && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
   },
 ]
