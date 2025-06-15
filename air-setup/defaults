@@ -1,0 +1,24 @@
+# Disable .DS_Store file creation on network and USB drives
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Enable path bar in Finder
+defaults write com.apple.finder "ShowPathbar" -bool "true" && killall Finder
+
+# Show hidden files in Finder
+defaults write com.apple.finder "AppleShowAllFiles" -bool "false" && killall Finder
+
+# Sort folders first in Finder
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true" && killall Finder
+
+# Enable Dock auto-hide
+defaults write com.apple.dock autohide -bool "true"
+
+# Auto delete old trash items
+defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true"
+ 
+# Disable Finder warning when changing file extensions
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
+
+# Hide Desktop Icons
+defaults write com.apple.finder "CreateDesktop" -bool "false"
