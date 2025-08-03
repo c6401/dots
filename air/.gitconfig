@@ -12,9 +12,9 @@
 	eol = lf
 	fsmonitor = true
 	untrackedCache = true
+	excludesfile = ~/.gitignore
 [credential]
 	helper = osxkeychain
-	excludesfile = ~/.gitignore
 	editor = vim
 [diff]
 	algorithm = histogram
