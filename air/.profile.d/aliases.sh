@@ -3,7 +3,6 @@ alias ml="himalaya"
 alias mlb="himalaya -a psg"
 alias mlc="himalaya -a cy"
 alias r='. ranger'
-alias l='eza'
 alias ls='eza'
 alias ll='eza -l'
 alias la='eza -la'
