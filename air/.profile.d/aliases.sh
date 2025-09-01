@@ -2,7 +2,6 @@ alias htmlmd="pandoc -f html -t markdown"
 alias ml="himalaya"
 alias mlb="himalaya -a psg"
 alias mlc="himalaya -a cy"
-alias r='. ranger'
 alias ls='eza'
 alias ll='eza -l'
 alias la='eza -la'
@@ -12,6 +11,7 @@ alias xcat='/bin/cat'
 alias z='zoxide'
 alias xcd='/bin/cd'
 alias py='python'
+alias nv='nvim'
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
