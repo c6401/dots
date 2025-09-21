@@ -1,3 +1,4 @@
+alias g='git'
 alias htmlmd="pandoc -f html -t markdown"
 alias ml="himalaya"
 alias mlb="himalaya -a psg"
@@ -6,7 +7,6 @@ alias ls='eza'
 alias ll='eza -l'
 alias la='eza -la'
 alias xls='/bin/ls'
-alias cat='bat'
 alias xcat='/bin/cat'
 alias z='zoxide'
 alias xcd='/bin/cd'
