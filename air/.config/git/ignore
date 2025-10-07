@@ -1,0 +1,9 @@
+.*/
+
+docker-compose.override.yml
+__pycache__
+.env
+.localprofile
+*.pyc
+*.local*
+*.my*
