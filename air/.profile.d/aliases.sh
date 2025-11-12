@@ -12,10 +12,4 @@ alias z='zoxide'
 alias xcd='/bin/cd'
 alias py='python'
 alias v='nvim'
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  yazi "$@" --cwd-file="$tmp"
-  IFS= read -r -d '' cwd < "$tmp"
-  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-  rm -f -- "$tmp"
-}
+function y() {local tmp="$(mktemp -t "yazi-cwd.XX")" cwd;yazi "$@" --cwd-file="$tmp";IFS= read -r -d '' cwd < "$tmp";builtin cd -- "$cwd";rm -f -- "$tmp"}
