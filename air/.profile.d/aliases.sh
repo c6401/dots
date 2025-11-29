@@ -1,3 +1,4 @@
+alias aliases='nvim ~/.profile.d/aliases.sh'
 alias g='git'
 alias htmlmd="pandoc -f html -t markdown"
 alias ml="himalaya"
@@ -12,4 +13,10 @@ alias z='zoxide'
 alias xcd='/bin/cd'
 alias py='python'
 alias v='nvim'
-function y() {local tmp="$(mktemp -t "yazi-cwd.XX")" cwd;yazi "$@" --cwd-file="$tmp";IFS= read -r -d '' cwd < "$tmp";builtin cd -- "$cwd";rm -f -- "$tmp"}
+alias katamari='nvim /Volumes/swap/Sync/katamari/'
+
+function y() {local tmp="$(mktemp -t "yazi-cwd.XX")" cwd
+yazi "$@" --cwd-file="$tmp"
+IFS= read -r -d '' cwd <"$tmp"
+builtin cd -- "$cwd"
+rm -f -- "$tmp"}
