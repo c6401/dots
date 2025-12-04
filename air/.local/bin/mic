@@ -1,0 +1,4 @@
+ffmpeg -y -f avfoundation -i ":0" /tmp/output.wav
+uvx parakeet-mlx --output-format txt /tmp/output.wav --output-dir /tmp 1>&2
+cat /tmp/output.txt | pbcopy
+cat /tmp/output.txt
