@@ -14,6 +14,7 @@ alias xcd='/bin/cd'
 alias py='python'
 alias v='nvim'
 alias katamari='nvim /Volumes/swap/Sync/katamari/'
+alias gemma='ollama run gemma3'
 
 function y() {local tmp="$(mktemp -t "yazi-cwd.XX")" cwd
 yazi "$@" --cwd-file="$tmp"
