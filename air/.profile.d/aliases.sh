@@ -15,6 +15,7 @@ alias py='python'
 alias v='nvim'
 alias katamari='nvim /Volumes/swap/Sync/katamari/'
 alias gemma='ollama run gemma3'
+alias proofread='ollama run gemma3 please proofread: "$(pbpaste)" | tee >(pbcopy)'
 
 function y() {local tmp="$(mktemp -t "yazi-cwd.XX")" cwd
 yazi "$@" --cwd-file="$tmp"
