@@ -74,41 +74,49 @@
   "editor.renderWhitespace": "all",
   "jupyter.experiments.enabled": false,
   "jupyter.interactiveWindow.cellMarker.decorateCells": "allCells",
-  "mcp": {
-    "servers": {
-      "mcp-server-time": {
-        "command": "uvx",
-        "args": [
-          "--with",
-          "mcp_server_time",
-          "python",
-          "-m",
-          "mcp_server_time",
-          "--local-timezone=America/Los_Angeles"
-        ],
-        "env": {}
-      },
-      "playwright": {
-        "command": "npx",
-        "args": [
-          "@playwright/mcp@latest"
-        ]
-      },
-      "mcp-run-python": {
-        "command": "deno",
-        "args": [
-          "run",
-          "-N",
-          "-R=node_modules",
-          "-W=node_modules",
-          "--node-modules-dir=auto",
-          "jsr:@pydantic/mcp-run-python",
-          "stdio",
-        ],
-        "env": {}
-      }
-    }
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true,
+    "windsurf": true,
+    "cursor-global": true,
+    "cursor-workspace": true
   },
-  "chat.mcp.discovery.enabled": true,
   "github.copilot.nextEditSuggestions.enabled": true,
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "watch\\.*",
+        "cmd": "bin/onsave${fileExtname}.sh '${file}' || true",
+        "messageAfter": "- 1. Complete",
+      },
+      {
+        "match": ".*\\.watch\\.*",
+        "cmd": "bin/onsave${fileExtname}.sh '${file}' || true",
+        "messageAfter": "- 1. Complete",
+      },
+    ]
+  },
+  // "python.analysis.typeCheckingMode": "strict",
+  // "editor.fontLigatures": "'ss09', 'zero', 'onum' 'ss01'",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "docker.extension.enableComposeLanguageServer": false,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "terminal.integrated.suggest.enabled": true,
 }
