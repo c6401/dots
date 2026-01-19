@@ -16,6 +16,7 @@ alias v='nvim'
 alias katamari='nvim /Volumes/swap/Sync/katamari/'
 alias gemma='ollama run gemma3'
 alias proofread='ollama run gemma3 please proofread: "$(pbpaste)" | tee >(pbcopy)'
+alias snip='(cd /Volumes/Swap/Sync/projects/snippets && nvim )'
 
 function px() {
   // python execute
