@@ -15,6 +15,7 @@ alias z='zoxide'
 alias dlpod='yt-dlp --embed-chapters --embed-thumbnail --extract-audio --audio-format mp3 --audio-quality 0 "$@"'
 alias co='git checkout $(git branch | fzf --height 40% --layout=reverse --ansi)'
 alias trash='osascript -e "tell application \"Finder\" to move the POSIX file \"$1\" to the trash"'
+alias cd..='cd ..'
 
 
 function px() {
