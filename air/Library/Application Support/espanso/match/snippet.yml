@@ -5,4 +5,4 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: cd /Volumes/swap/Sync/projects/snippets/snippets && ls **/*.* | choose | xargs cat
+          cmd: cd /Volumes/swap/Sync/projects/snippets/snippets && ls **/*.* | /Volumes/swap/Sync/projects/scrp/bin/sel | xargs cat
