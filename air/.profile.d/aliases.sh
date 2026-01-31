@@ -19,7 +19,6 @@ alias cd..='cd ..'
 
 
 function px() {
-  // python execute
   uv run python -c "i=type('_',(),{'__getattr__':lambda s,m: __import__(m)})(); x='' if i.sys.stdin.isatty() else i.sys.stdin.read(); print($*)"
 }
 
